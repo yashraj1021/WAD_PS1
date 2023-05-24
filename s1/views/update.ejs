@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Page</title>
+  </head>
+  <body>
+    <a href="/">HOME</a>
+    <center>
+      <h1>Welcome to Update Page!</h1>
+      <p>You are currently editing <%=student.name%> , <%=student.rollNo%></p>
+      <form action="/update/<%=student._id%>" method="post">
+        Name :
+        <input type="text" value="<%=student.name%>" name="name" />
+        <br /><br />
+        Roll Number :
+        <input type="number" value="<%=student.rollNo%>" name="rollno" />
+        <br /><br />
+        WAD :
+        <input
+          type="number"
+          placeholder="<%=student.wad%>"
+          max="100"
+          name="wad"
+        />
+        <br /><br />
+        DSBDA :
+        <input
+          type="number"
+          placeholder="<%=student.dsbda%>"
+          max="100"
+          name="dsbda"
+        />
+        <br /><br />
+        CNS :
+        <input
+          type="number"
+          placeholder="<%=student.cns%>"
+          max="100"
+          name="cns"
+        />
+        <br /><br />
+        CC :
+        <input
+          type="number"
+          placeholder="<%=student.cc%>"
+          max="100"
+          name="cc"
+        />
+        <br /><br />
+        AI :
+        <input
+          type="number"
+          placeholder="<%=student.ai%>"
+          max="100"
+          name="ai"
+        />
+        <br /><br />
+        <button type="submit">Update</button>
+      </form>
+    </center>
+  </body>
+</html>

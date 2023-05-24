@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Page</title>
+</head>
+<body>
+    <a href="/">HOME</a>
+    <center>
+        <h1>Welcome to update Page!</h1>
+        <p>You are editing <% =item.name%>, <% = item.rollNo%></p>
+        <form action="/updatestudent/<%= item.id %>" method="post">
+            <input
+            type="text"
+            value="<%= item.name%>"
+            name="name"
+            required
+          />
+          <input
+            type="number"
+            value="<%= item.rollno%>"
+            name="rollno"
+            required
+          />
+          <input
+            type="number"
+            name="wad_marks"
+            placeholder="Enter WAD marks"
+            required
+          />
+          <input
+            type="number"
+            name="dsbda_marks"
+            placeholder="Enter DSBDA marks"
+            required
+          />
+          <input
+            type="number"
+            name="cns_marks"
+            placeholder="Enter CNS marks"
+            required
+          />
+          <input
+            type="number"
+            name="cc_marks"
+            placeholder="Enter CS marks"
+            required
+          />
+          <input
+            type="number"
+            name="ai_marks"
+            placeholder="Enter AI marks"
+            required
+          />
+          <button type="submit">Update</button>
+        </form>
+    </center>
+</body>
+</html>

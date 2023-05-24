@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Statement</title>
+  </head>
+  <body>
+    <a href="/">HOME</a>
+    <ul type="a">
+      <li>Create a Database called student.</li>
+      <br /><br /><br />
+      <li>Create a collection called studentmarks</li>
+      <br /><br /><br />
+      <li>
+        Insert array of documents in above Collection. [Document have following
+        field: Name, Roll_No, WAD_Marks, CC_Marks,
+        DSBDA_Marks,CNS_Marks,AI_marks]
+      </li>
+      <br /><br /><br />
+      <li>
+        Display total count of documents and List all the documents in browser.
+        <br />
+        Total Count of Students :<strong> <%=totalCount%></strong> <br />To see
+        all the documents,
+        <a href="/display"> click here</a>
+      </li>
+      <br /><br /><br />
+      <li>
+        List the names of students who got more than 20 marks in DSBDA Subject
+        in browser.
+        <br />
+        Students who got more than 20 marks in DSBDA are : <br />
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+          </tr>
+          <% dsbda.forEach(student => { %>
+          <tr>
+            <td><%=student["name"]%></td>
+            <td><%=student["rollNo"]%></td>
+          </tr>
+          <% }) %>
+        </table>
+      </li>
+      <br /><br /><br />
+      <li>Update the marks of Specified students by 10.</li>
+      To update the marks of Specified students,
+      <a href="/display">Click Here</a>
+      and then select required student.
+      <br /><br /><br />
+      <li>
+        List the names who got more than 25 marks in all subjects in browser.
+      </li>
+      Below are the students with more than 25 marks in all subjects :
+      <br />
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Roll Number</th>
+          <th>WAD</th>
+          <th>DSBDA</th>
+          <th>CNS</th>
+          <th>CC</th>
+          <th>AI</th>
+        </tr>
+        <% morethan25.forEach(student => { %>
+        <tr>
+          <td><%=student["name"]%></td>
+          <td><%=student["rollNo"]%></td>
+          <td><%=student["wad"]%></td>
+          <td><%=student["dsbda"]%></td>
+          <td><%=student["cns"]%></td>
+          <td><%=student["cc"]%></td>
+          <td><%=student["ai"]%></td>
+        </tr>
+        <% }) %>
+      </table>
+      <br /><br /><br />
+      <li>
+        List the names who got less than 40 in both Maths and Science in
+        browser. .
+      </li>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Roll Number</th>
+          <th>WAD</th>
+          <th>DSBDA</th>
+          <th>CNS</th>
+          <th>CC</th>
+          <th>AI</th>
+        </tr>
+        <% lessthan40.forEach(student => { %>
+        <tr>
+          <td><%=student["name"]%></td>
+          <td><%=student["rollNo"]%></td>
+          <td><%=student["wad"]%></td>
+          <td><%=student["dsbda"]%></td>
+          <td><%=student["cns"]%></td>
+          <td><%=student["cc"]%></td>
+          <td><%=student["ai"]%></td>
+        </tr>
+        <% }) %>
+      </table>
+      <br /><br /><br />
+      <li>Remove specified student document from collection.</li>
+      To remove a Specified student,
+      <a href="/display">Click Here</a>
+      and then select required student.
+      <br /><br /><br />
+      <li>Display the Students data in Browser in tabular format.</li>
+      <a href="/display">Click Here</a>
+      To see tabular format
+      <br /><br /><br />
+    </ul>
+  </body>
+</html>

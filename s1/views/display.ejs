@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+  </head>
+  <body>
+    <a href="/">HOME</a>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <center>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Roll Number</th>
+          <th>WAD</th>
+          <th>DSBDA</th>
+          <th>CNS</th>
+          <th>CC</th>
+          <th>AI</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </tr>
+        <% students.forEach(student => { %>
+        <tr>
+          <td><%=student["name"]%></td>
+          <td><%=student["rollNo"]%></td>
+          <td><%=student["wad"]%></td>
+          <td><%=student["dsbda"]%></td>
+          <td><%=student["cns"]%></td>
+          <td><%=student["cc"]%></td>
+          <td><%=student["ai"]%></td>
+          <td><a href="/delete/<%=student._id%>">Delete</a></td>
+          <td><a href="/update/<%=student._id%>">Update</a></td>
+        </tr>
+        <% }) %>
+      </table>
+    </center>
+  </body>
+</html>
